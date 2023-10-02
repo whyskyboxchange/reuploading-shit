@@ -150,7 +150,6 @@ function Library:CreateLabel(Properties, IsHud)
 		TextColor3 = Library.FontColor;
 		TextSize = 16;
 		TextStrokeTransparency = 0;
-		TextScaled = true;
 	});
 
 	Library:ApplyTextStroke(_Instance);
@@ -1154,7 +1153,9 @@ do
 			local State = KeyPicker:GetState();
 
 			ContainerLabel.Text = string.format('[%s] %s (%s)', KeyPicker.Value, Info.Text, KeyPicker.Mode);
-
+			
+			ContainerLabel.TextScaled = true;
+			
 			ContainerLabel.Visible = true;
 			ContainerLabel.TextColor3 = State and Library.AccentColor or Library.FontColor;
 
@@ -1449,6 +1450,7 @@ do
 				TextSize = 14;
 				Text = Button.Text;
 				ZIndex = 6;
+				TextScaled = true;
 				Parent = Inner;
 			});
 
