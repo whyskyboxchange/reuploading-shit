@@ -2,18 +2,20 @@ return function(Object: Instance)
 	local Light: PointLight = Object:FindFirstChildWhichIsA('PointLight')
 	local Mesh: SpecialMesh = Object:FindFirstChildWhichIsA("SpecialMesh")
 	local Particle: ParticleEmitter = Object:FindFirstChildWhichIsA('ParticleEmitter', true)
-	
+
 	if Object:IsA('MeshPart') then
 		if Object.MeshId == 'rbxassetid://5196551436' then
 			return {
 				Color = Color3.fromRGB(255, 213, 128),
 				Name = 'Amulet'
 			}
-		elseif Object.MeshId == 'rbxassetid://923469333' then
+		--[[
+		elseif Object.MeshId == 'rbxassetid://923469333' then -- outdated mesh
 			return {
 				Color = Color3.fromRGB(255, 213, 128),
 				Name = 'Candy'
 			}
+		]]
 		elseif Object.MeshId == 'rbxassetid://5204003946' then
 			return {
 				Color = Color3.fromRGB(255, 213, 128),
@@ -21,7 +23,7 @@ return function(Object: Instance)
 			}
 		elseif Object.MeshId == 'rbxassetid://2520762076' then
 			return {
-				Color = Color3.fromRGB(137, 207, 240),
+				Color = Color3.fromRGB(0, 0, 0),
 				Name = 'Howler Friend'
 			}
 		elseif Object.MeshId == 'rbxassetid://5196577540' then
@@ -43,6 +45,11 @@ return function(Object: Instance)
 			return {
 				Color = Color3.fromRGB(137, 207, 240),
 				Name = 'Scroll'
+			}
+		elseif Object.MeshId == 'rbxassetid://4103271893' then
+			return {
+				Color = Color3.fromRGB(255, 166, 175),
+				Name = 'Candy'
 			}
 		end
 	elseif Object:IsA('Part') then
@@ -140,7 +147,7 @@ return function(Object: Instance)
 			}
 		end
 	end
-	
+
 	return {
 		Color = Color3.fromRGB(255, 255, 255),
 		Name = 'Unknown'
